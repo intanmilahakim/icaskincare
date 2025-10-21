@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Skincare by Halawatunnisa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Halaman awal */
+    #home {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom right, #ffb6c1, #ffe4ec);
+    }
+    #home h1 {
+      color: #fff;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    #home p {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    #home button {
+      background: #ff4d88;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #home button:hover {
+      background: #ff2e6a;
+    }
+
+    /* Katalog produk */
+    #katalog {
+      display: none;
+    }
+    header {
+      background: #ff80aa;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 230px;
+      margin: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 {
+      color: #ff4081;
+      margin: 10px 0 5px;
+    }
+    .product p {
+      color: #444;
+      font-size: 14px;
+    }
+    .btn {
+      background: #ff80aa;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #ff4d88;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ff80aa;
+      color: white;
+    }
+
+    /* Halaman pesan */
+    #pesan {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button[type="submit"] {
+      background: #ff4d88;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button[type="submit"]:hover {
+      background: #ff2e6a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Halaman Awal -->
+  <section id="home">
+    <h1>Selamat Datang di Halawatunnisa Skincare 💖</h1>
+    <p>Temukan perawatan terbaik untuk kulitmu yang sehat dan bercahaya.</p>
+    <button onclick="showKatalog()">Belanja Sekarang</button>
+  </section>
+
+  <!-- Katalog Produk -->
+  <section id="katalog">
+    <header>
+      <h1>Katalog Skincare by Halawatunnisa</h1>
+      <p>Perawatan terbaik untuk kulitmu 💄</p>
+    </header>
+
+    <div class="container">
+      <div class="product">
+        <img src="images/face wash.jpg" alt="Face Wash">
+        <h3>Bright Face Wash</h3>
+        <p>Membersihkan wajah tanpa membuat kulit kering.</p>
+        <p><b>Rp 28.000</b></p>
+        <button class="btn" onclick="showPesan('Bright Face Wash')">Belanja Sekarang</button>
+      </div>
+
+      <div class="product">
+        <img src="images/toner.png" alt="Toner">
+        <h3>Rose Toner</h3>
+        <p>Menyegarkan kulit dan mengangkat sisa makeup.</p>
+        <p><b>Rp 40.000</b></p>
+        <button class="btn" onclick="showPesan('Rose Toner')">Belanja Sekarang</button>
+      </div>
+
+      <div class="product">
+        <img src="images/serum.png" alt="Serum">
+        <h3>Glow Serum</h3>
+        <p>Memberi efek glowing dan menutrisi kulit wajah.</p>
+        <p><b>Rp 55.000</b></p>
+        <button class="btn" onclick="showPesan('Glow Serum')">Belanja Sekarang</button>
+      </div>
+
+      <div class="product">
+        <img src="images/moisturizer.jpg" alt="Moisturizer">
+        <h3>Soft Moisturizer</h3>
+        <p>Melembapkan dan melembutkan kulit sepanjang hari.</p>
+        <p><b>Rp 30.000</b></p>
+        <button class="btn" onclick="showPesan('Soft Moisturizer')">Belanja Sekarang</button>
+      </div>
+
+      <div class="product">
+        <img src="images/nigth cream.png" alt="Night Cream">
+        <h3>Night Cream</h3>
+        <p>Meremajakan kulit wajah saat kamu tidur.</p>
+        <p><b>Rp 35.000</b></p>
+        <button class="btn" onclick="showPesan('Night Cream')">Belanja Sekarang</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Halawatunnisa Skincare</p>
+    </footer>
+  </section>
+
+  <!-- Halaman Pesan -->
+  <section id="pesan">
+    <h2>Formulir Pemesanan</h2>
+    <form onsubmit="kirimPesan(event)">
+      <label>Nama Lengkap</label>
+      <input type="text" id="nama" required>
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Produk yang Dipesan</label>
+      <input type="text" id="produk" readonly>
+
+      <label>Pesan Tambahan</label>
+      <textarea id="pesanTeks" rows="4" placeholder="Contoh: Kirim ke alamat..."></textarea>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </section>
+
+  <script>
+    function showKatalog() {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("katalog").style.display = "block";
+    }
+
+    function showPesan(namaProduk) {
+      document.getElementById("katalog").style.display = "none";
+      document.getElementById("pesan").style.display = "block";
+      document.getElementById("produk").value = namaProduk;
+    }
+
+    function kirimPesan(e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const produk = document.getElementById("produk").value;
+      const pesanTeks = document.getElementById("pesanTeks").value;
+      alert(`Pesanan dikirim!\n\nNama: ${nama}\nEmail: ${email}\nProduk: ${produk}\nPesan: ${pesanTeks}`);
+    }
+  </script>
+</body>
+</html
